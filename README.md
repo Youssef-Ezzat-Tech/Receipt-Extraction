@@ -13,8 +13,8 @@ Merchant Name | Date | Total | Subtotal | Tax | Payment Method | Address
 
 ## Files
 - `Exports/receipt_extraction_export.json` — bounding box annotations (JSON)  
-- `docs/` — labeling guidelines + project summary  
-- `screenshots/` — annotation proof  
+- `docs` — labeling guidelines + project summary  
+- `screenshots` — annotation proof  
 
 ## Skills Shown
 Bounding box annotation • OCR data prep • multi-field extraction • handling messy real-world data
