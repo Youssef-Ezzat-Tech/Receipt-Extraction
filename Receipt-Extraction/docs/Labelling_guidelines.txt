@@ -1,0 +1,76 @@
+RECEIPT DATA EXTRACTION - LABELING GUIDELINES
+
+OBJECTIVE: Extract structured fields from receipt images using bounding box annotation
+
+FIELD DEFINITIONS:
+
+1. MERCHANT_NAME (Red Box)
+   - Business name at top of receipt
+   - Include full legal name if visible
+   - Example: "Starbucks Coffee", "McDonald's"
+
+2. DATE (Blue Box)
+   - Transaction date in any format
+   - Include full date string as printed
+   - Example: "12/15/2024", "Dec 15, 2024"
+
+3. TOTAL (Green Box)
+   - Final amount paid
+   - Usually labeled "Total", "Amount", "Balance Due"
+   - Include currency symbol if present
+   - Example: "$8.47", "Total: 8.47"
+
+4. SUBTOTAL (Orange Box)
+   - Pre-tax amount
+   - Usually labeled "Subtotal", "Sub Total"
+   - Skip if not present
+
+5. TAX (Purple Box)
+   - Tax amount charged
+   - Usually labeled "Tax", "Sales Tax", "GST"
+   - Example: "Tax: $0.67"
+
+6. PAYMENT_METHOD (Yellow Box)
+   - How payment was made
+   - Look for: "VISA", "CASH", "MASTERCARD", "DEBIT"
+   - Skip if not clearly stated
+
+7. ADDRESS (Pink Box)
+   - Store location/address
+   - May be partial or full address
+   - Example: "123 Main St, City, State"
+
+ANNOTATION RULES:
+
+Box Placement:
+- Draw tight boxes around text only (no excess whitespace)
+- If field spans multiple lines, include all lines in one box
+- Boxes should not overlap unless unavoidable
+
+Missing Fields:
+- Only label fields that are clearly visible
+- Do not guess or infer missing information
+- Empty/blank receipts: submit without annotations
+
+Low Quality Images:
+- If text is unreadable due to blur/damage, skip that field
+- If entire receipt is illegible, submit without annotations
+- Document quality issues in notes if severe
+
+Edge Cases:
+- Multiple totals (e.g., subtotal + tax + total): label each separately
+- Amended totals/corrections: label the final amount only
+- Foreign currency: label as-is, include currency symbol
+- Handwritten additions: skip unless clearly legible
+
+QUALITY STANDARDS:
+- Minimum 90% field extraction accuracy
+- All visible fields must be labeled
+- Consistent box sizing and placement
+- Review 20% of annotations for quality assurance
+
+COMMON MISTAKES TO AVOID:
+- Labeling item names as MERCHANT_NAME (merchant is the store, not products)
+- Missing tax when shown separately from total
+- Confusing subtotal with total
+- Over-generous box sizing (keep tight to text)

@@ -1,0 +1,15 @@
+PROJECT: Receipt Data Extraction
+TOOL: Label Studio
+DURATION: 2 hours
+DATASET: 30 receipt images (cafes, restaurants, retail)
+TASK: Structured data extraction via bounding box annotation
+FIELDS LABELED: Merchant Name, Date, Total, Subtotal, Tax, Payment Method, Address
+TOTAL ANNOTATIONS: 180 fields across 30 documents
+AVERAGE FIELDS PER RECEIPT: 6
+CHALLENGES HANDLED: Low image quality, varied receipt formats, missing fields
+EXPORT FORMAT: JSON with bounding box coordinates
+SKILLS DEMONSTRATED:
+- OCR ground truth creation
+- Multi-field structured extraction
+- Document understanding
+- Handling inconsistent data formats
