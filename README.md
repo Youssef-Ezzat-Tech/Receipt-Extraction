@@ -8,7 +8,7 @@ Merchant Name | Date | Total | Subtotal | Tax | Payment Method | Address
 
 ## Quality
 - 180 fields annotated (≈6 per receipt)
-- ≥90% accuracy standard applied
+- 100% accurracy on 20-sample audit
 - Edge cases handled (low quality, missing fields, format variation)
 
 ## Files
